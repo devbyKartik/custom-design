@@ -1,0 +1,17 @@
+
+ @import './mixins/breakpoints.scss';
+ 
+.container {
+  max-width: 1440px;
+  // width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  &.containerXs {
+    @include sm {
+      padding: 0;
+      width: 100%;
+    }
+  }
+}

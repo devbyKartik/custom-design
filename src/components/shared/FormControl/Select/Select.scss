@@ -1,0 +1,21 @@
+
+
+.hideLabel {
+  display: none;
+}
+.select {
+  position: relative;
+  select {
+    appearance: none;
+    padding-right: 20px;
+  }
+  &:after {
+    position: absolute;
+    font-size: 10px;
+    transform: translate(-50%, -50%);
+    top: 55%;
+    right: 0;
+    pointer-events: none;
+    color: #666666;
+  }
+}

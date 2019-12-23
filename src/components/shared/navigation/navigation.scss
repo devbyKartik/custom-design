@@ -1,0 +1,168 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets//scss/mixins/breakpoints.scss";
+
+.userNavigation {
+
+    &__nav-list {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+
+        li {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            font-size: $small-font;
+            width: 50px;
+            border-left: 1px solid $panel-border;
+            text-align: center;
+            cursor: pointer;
+
+            svg {
+                margin-left: auto;
+                margin-right: auto;
+                height: 12px;
+                padding: 5px;
+
+                g {
+                    fill: $dark-gray;
+                    justify-content: stretch;
+                }
+            }
+
+            @include sm {
+                padding: 5px;
+                width: 40px;
+                border-left: none;
+            }
+
+            &:last-child {
+                background: $link-color;
+                color: $panel-border;
+
+                g {
+                    fill: $panel-border;
+                }
+            }
+        }
+    }
+}
+
+.mobile-navigation__nav-list {
+    list-style-type: none;
+    margin: 0;
+        padding: 0;
+    li {
+        padding: 5px 0px;
+        margin-left: 0px;
+        cursor: pointer;
+    }
+
+    ul.mobile-child-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .single-toggle-child {
+        text-transform: uppercase;
+
+
+    }
+}
+
+
+
+
+
+.product-navigation__nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    cursor: pointer
+}
+
+.product-toggle-sub-menu {
+    position: absolute;
+    right: 0;
+    overflow: inherit;
+    align-items: self-start;
+    width: 80%;
+    padding: 0px 10%;
+
+    &__container {
+        background: $input-border;
+        padding: 0px 10px;
+        height: 80vh;
+
+    }
+
+    .productMegaMenu-wrapper {
+        display: flex;
+
+        &__left-sidebar {
+            width: 20%;
+
+            li {
+                display: flex;
+                padding: 8px 10px;
+                border-bottom: 1px solid $input-border;
+                background: $hover-bg;
+                font-size: $medium-font;
+                cursor: pointer
+            }
+
+            .active {
+                background: #fff;
+            }
+
+        }
+
+        &__container-link {
+            background: #fff;
+            width: 77%;
+            justify-content: space-around;
+
+            a.close-button {
+                text-align: right;
+                width: 98%;
+                position: relative;
+                display: flex;
+                flex-direction: column-reverse;
+                margin-top: 10px;
+                font-size: $medium-font;
+                cursor: pointer
+            }
+
+            .right-side-mega__sections {
+                display: flex;
+                justify-content: space-around;
+
+                .category-heading {
+                    font-size: $medium-font;
+                    font-weight: $font-weight-bold;
+                }
+
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        font-size: $medium-font;
+                        display: flex;
+                        padding: 5px 0px
+                    }
+                }
+
+                
+            }
+
+        }
+    }
+}
+
+
+
+.single-toggle-child .active {
+    color: $link-color;
+}
