@@ -1,28 +1,27 @@
-import React ,{Fragment} from 'react';
+import React, { Fragment } from 'react';
 import Button from "../../shared/buttons/Button";
 import Select from "../../shared/FormControl/Select";
+import { liveChat, langSelectOption } from "../../../static/navigation";
+
+/**
+ *Name: TopHeader
+ *Desc: TopHeader component for top header section before main header.
+ */
+
+
 
 function TopHeader() {
-  const buttonInfo={
-    type:'simple',
-    buttonClass:'live-chat',
-    title : 'Live Chat',
-  }
-  const selectOption={
-    options:[{value:"En",name:"En"},{value:"Fn",name:"Fn"}]
-  }
+
   return (
     <Fragment>
       <div className="topHeaderWrapper">
         <div className="topHeaderWrapper__languageSelect">
-        <Select label="" id="lang" options={selectOption.options} />
-           
+          <Select label="" id="lang" options={langSelectOption.options} />
         </div>
         <div className="topHeaderWrapper__liveChat">
-           <Button buttonInfo={buttonInfo}></Button>
+          <Button buttonInfo={liveChat}></Button>
         </div>
       </div>
-      
     </Fragment>
   );
 }

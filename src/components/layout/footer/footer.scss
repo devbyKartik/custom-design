@@ -1,0 +1,118 @@
+@import "../../../assets//scss/variables.scss";
+@import "../../../assets/scss/mixins/breakpoints.scss";
+
+.footer-wrapper {
+
+
+    .main-footer {
+        background: $dark-gray;
+        padding: 20px 15px;
+
+        .footer-top-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: wrap;
+            
+            &__single-section {
+                width: 25%;
+                @include sm {
+                    width: 100%;
+                }
+                .desktop-view{
+                    
+                    @include sm {
+                        display: none;
+                    }
+    
+                    h3 {
+                        font-size: $xlarge-font;
+                        color: $white;
+                    }
+    
+                    ul {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+    
+                        li {
+                            padding: 5px 0px;
+                            font-size: $medium-font;
+                            color: $white;
+                            a{
+                                text-decoration: none;
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+                .mobile-view{
+                    width: 100%;
+                   
+                    @include min-md {
+                            display: none;
+                      }
+                    
+    
+                    h3 {
+                        font-size: $xlarge-font;
+                        color: $white;
+                    }
+    
+                    ul {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+    
+                        li {
+                            padding: 5px 0px;
+                            font-size: $medium-font;
+                            color: $white;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .bottom-footer {
+        background: $light-gray;
+        padding: 15px 15px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        overflow: hidden;
+
+    }
+
+    .copy-right-footer {
+        background: $dark-gray;
+        padding: 20px 15px;
+        text-align: center;
+        color: $white;
+        font-size: $medium-font;
+
+        .bottom-footer-navigation__nav-list {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+
+            li {
+                padding: 0px 10px;
+                border-right: 1px solid;
+
+                a {
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+
+            li:last-child {
+                border-right: none;
+            }
+        }
+    }
+
+
+}

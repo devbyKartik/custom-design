@@ -6,7 +6,7 @@ function Layout() {
   return (
       <div className="container">
          <Header />
-           <div className="wrapper">hello in container</div>
+           <div className="main-wrapper"></div>
         <Footer />
       </div>
    

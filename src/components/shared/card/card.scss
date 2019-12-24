@@ -1,0 +1,85 @@
+@import "../../../assets/scss/variables.scss";
+
+    .modal-toggle-sub-menu{
+        .header-card-wrapper {
+            width: 100%;
+            overflow: hidden;
+            &__header {
+                width: 100%;
+                background: $link-color;
+                padding: 1px 10px;
+                text-align: left;
+                p{
+                    font-size: $large;
+                    color: $white;
+                }
+            }
+            &__body{
+                padding:5px;
+                .card-table{
+                    tbody tr {
+                        width: 100%;
+                        border-bottom: $dark-gray;
+                        td {
+                            width: 100%;
+                            padding: 10px 5px;
+                            text-align: left;
+                            color:$light-gray;
+                            
+                        }
+                  } 
+                }
+                .card-price {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    padding: 0px 5px;
+                    .left-section a {
+                        color: $link-color;
+                        text-decoration: none;
+                        
+                    }
+                    .right-section {
+                        text-align: right;
+                        p{
+                            color:$light-gray;
+                        }
+                        h2{
+                            color: $link-color;
+                        }
+                    }
+                }
+                .card-button {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0px 5px;
+                    .rounded-button{
+                        text-decoration: none;
+                        border-radius: 25px;
+                        border: 1px solid $link-color;
+                        padding: 10px 25px;
+                        color: $link-color;
+                     }
+                     .rounded-button-red{
+                        text-decoration: none;
+                        border-radius: 25px;
+                        border: 1px solid $link-color;
+                        padding: 10px 25px;
+                        background: $link-color;
+                        color: $white;
+                     }
+                }
+                .card-footer-link {
+                    text-align: left;
+                    padding: 0px 5px;
+                    color: $light-gray;
+                    .click-here {
+                        color:  $link-color;
+                    }
+                }
+
+            }
+        }
+        
+    }
+

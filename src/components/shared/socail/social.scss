@@ -1,0 +1,22 @@
+@import "../../../assets/scss/variables.scss";
+.social-links {
+    h3{
+        color: $white; 
+        font-size: $medium-font;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0px;
+        padding: 0px;
+        li{
+            a {
+                background: $white;
+                padding: 7px;
+                border-radius: 5px;
+                color: $dark-gray;
+                margin-right: 10px;
+            }
+        }
+    }
+}

@@ -7,12 +7,13 @@
         list-style-type: none;
         display: flex;
         margin: 0;
+        padding: 0;
 
         li {
             padding: 10px;
             display: flex;
             flex-direction: column;
-            font-size: $small-font;
+            font-size: $body-font;
             width: 50px;
             border-left: 1px solid $panel-border;
             text-align: center;
@@ -21,15 +22,15 @@
             svg {
                 margin-left: auto;
                 margin-right: auto;
-                height: 12px;
-                padding: 5px;
+                // height: 12px;
+                // padding: 5px;
+                display: flex;
 
                 g {
                     fill: $dark-gray;
                     justify-content: stretch;
                 }
             }
-
             @include sm {
                 padding: 5px;
                 width: 40px;
@@ -44,28 +45,111 @@
                     fill: $panel-border;
                 }
             }
+
+            .cart-bottom-line {
+                position: absolute;
+                right: 0;
+                width: 70px;
+                height: 14px;
+                background: $link-color;
+                border-radius: 5px;
+            }
+
+            .cart.modal-toggle-sub-menu {
+                position: absolute;
+                right: 0;
+                background: $white;
+                width: 25%;
+                z-index: 999999999999;
+            }
+
+            @include sm {
+                .cart-bottom-line {
+                    width: 50px;
+                    height: 10px;
+                }
+
+                .cart.modal-toggle-sub-menu {
+                    position: absolute;
+                    right: 0;
+                    background: $white;
+                    width: 90%;
+                }
+            }
+
+            .help.modal-toggle-sub-menu {
+                position: absolute;
+                right: 70px;
+                background: $hover-bg;
+                width: 20%;
+                text-align: left;
+                z-index: 99999999999999999;
+
+            }
+
+            @include sm {
+                .help.modal-toggle-sub-menu {
+                    right: 0px;
+                    width: 90%;
+                }
+            }
+
+
+
+            .singIn.modal-toggle-sub-menu {
+                position: absolute;
+                right: 140px;
+                background: $white;
+                width: 20%;
+                z-index: 999999999999;
+            }
+
+            @include sm {
+                .singIn.modal-toggle-sub-menu {
+                    position: absolute;
+                    right: 0px;
+                    background: $white;
+                    width: 90%;
+                }
+            }
+
+
+
         }
+
     }
 }
 
 .mobile-navigation__nav-list {
     list-style-type: none;
     margin: 0;
-        padding: 0;
+    padding: 0;
+
     li {
-        padding: 5px 0px;
+        // padding: 5px 0px;
         margin-left: 0px;
         cursor: pointer;
+        margin-left: 10px;
+        font-size: $medium-font;
+
     }
 
     ul.mobile-child-list {
         list-style-type: none;
         margin: 0;
         padding: 0;
+
+        li {
+            padding: 2px 0px;
+        }
     }
 
     .single-toggle-child {
         text-transform: uppercase;
+
+        p span {
+            margin-left: 10px;
+        }
 
 
     }
@@ -80,7 +164,29 @@
     display: flex;
     justify-content: center;
     text-transform: uppercase;
-    cursor: pointer
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    font-size: $body-font;
+    border-bottom: 1px solid $panel-border;
+
+    li {
+        margin-right: 10px;
+        margin-left: 10px;
+
+        .single-toggle-child {
+            p {
+                margin-right: 10px;
+                margin-left: 10px;
+
+                svg {
+                    position: absolute;
+                    margin-top: -1px;
+                }
+            }
+        }
+
+    }
 }
 
 .product-toggle-sub-menu {
@@ -94,7 +200,7 @@
     &__container {
         background: $input-border;
         padding: 0px 10px;
-        height: 80vh;
+        height: 70vh;
 
     }
 
@@ -147,6 +253,7 @@
                 ul {
                     margin: 0;
                     padding: 0;
+
                     li {
                         font-size: $medium-font;
                         display: flex;
@@ -154,7 +261,7 @@
                     }
                 }
 
-                
+
             }
 
         }
@@ -165,4 +272,26 @@
 
 .single-toggle-child .active {
     color: $link-color;
+}
+
+// .modal-toggle-sub-menu {
+//     position: absolute;
+//     display: flex;
+//     flex-direction: unset;
+// }
+
+.header-help-wrapper {
+    .header-help-wrapper__list {
+        border-bottom: 1px solid $panel-border;
+        width: 100%;
+
+        a {
+            line-height: 40px;
+            padding-left: 10px;
+            text-decoration: none;
+            color: $panel-border;
+            color: $dark-gray;
+
+        }
+    }
 }

@@ -1,10 +1,12 @@
 @import '../../../assets//scss/variables.scss';
 @import "../../../assets/scss/mixins/breakpoints.scss";
 .header-wrapper {
+   
     .main-header {
         @include sm {
            display: none;
         }
+
         // top header scss
         .topHeaderWrapper {
             display: flex;
@@ -38,6 +40,8 @@
 
                 a {
                     font-size: $medium-font;
+                    color: $dark-gray;
+                    text-decoration: none;
                 }
             }
         }
@@ -49,12 +53,13 @@
             color: $dark-gray;
             // justify-content: center;
             align-items: center;
-
+            
             .logo {
                 justify-content: center;
                 display: flex;
                 flex-direction: column;
                 width: 15%;
+                padding:0px 10px;
             }
 
             a.link-tour {
@@ -64,13 +69,15 @@
                 border-radius: 5px;
                 font-size: $medium-font;
                 width: 15%;
-
+                text-decoration: none;
+                color: $dark-gray;
                 svg {
-                    width: 12px;
+                    width: 15px;
                     position: relative;
                     margin-right: 10px;
                     top: 4px;
-
+                    color: $btn-border;
+                    font-size: 15px;
                     g {
                         fill: $link-color;
                     }
@@ -119,6 +126,9 @@
  
                  a {
                      font-size: $medium-font;
+                     text-decoration: none;
+                     text-decoration: none;
+                     color: $dark-gray;
                  }
              }
          }
@@ -129,7 +139,7 @@
              border-bottom: 1px solid $panel-border;
              color: $dark-gray;
              align-items: center;
-             
+             padding-left: 12px;
             .logo {
                  justify-content: center;
                  display: flex;
@@ -147,12 +157,13 @@
                  border-radius: 5px;
                  font-size: $medium-font;
                  width: 15%;
- 
+                 text-decoration: none;
+                 color: $dark-gray;
                  svg {
-                     width: 12px;
+                     width: 15px;
                      position: relative;
                      margin-right: 10px;
-                     top: 4px;
+                     top: 1px;
  
                      g {
                          fill: $link-color;
@@ -180,9 +191,10 @@
                 border-radius: 5px;
                 font-size: $medium-font;
                 width: 15%;
-
+                text-decoration: none;
+                color: $dark-gray;
                 svg {
-                    width: 12px;
+                    width: 15px;
                     position: relative;
                     margin-right: 10px;
                     top: 4px;

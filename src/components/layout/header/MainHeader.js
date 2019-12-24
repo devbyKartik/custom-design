@@ -3,10 +3,28 @@ import TopHeader from "./TopHeader";
 import Navigation from "../../shared/navigation/Navigation"
 import Logo from "../../shared/logo/Logo";
 import Search from "../../shared/search/Search";
-import  { ReactComponent as Icons } from "../../../assets/images/search-icon.svg"
 import "./header.scss"
 import Button from "../../shared/buttons/Button";
-import {userNavigationInfo , mainNavigation , linkTour} from "../../../static/navigation";
+import {  mainNavigation , linkTour} from "../../../static/navigation";
+import {FiUser,FiMessageCircle,FiShoppingCart,FiDroplet} from "react-icons/fi";
+import Card from "../../shared/card/Card";
+import HeaderHalp from "../../shared/navigation/HeaderHalp";
+export const userNavigationInfo = {
+  type:"userNavigation",
+  navClass:"userNavigation",
+  navLinkInfo: [
+    { title: 'Sing-in', slug: 'sign-in', desingClass:'singIn', icon: <FiUser size={20}/> ,  childComponent:<Card type="header" />}, 
+    { title: 'Help', slug: 'help', desingClass:'help',icon: <FiMessageCircle size={20}/>  , childComponent:<HeaderHalp type="header" /> }, 
+    { title: 'Cart', slug: 'cart', desingClass:'cart',icon: <FiShoppingCart size={20} /> , childComponent:<Card type="header" />}
+  ]
+};
+/**
+ *Name: MainHeader
+ *Desc: MainHeader component for desktop view header section.
+ */
+
+
+
 function MainHeader() {
   return (
     <div className="header-wrapper">
@@ -15,16 +33,18 @@ function MainHeader() {
         <Logo  />
         <Search />
         <div className="link-toner-wrapper">
-          <Button buttonInfo={linkTour}><Icons/></Button>
+          <Button buttonInfo={linkTour}><FiDroplet/></Button>
         </div>
         <Navigation info={userNavigationInfo} />
       </div>
       <div className="main-navigation">
          <Navigation info={mainNavigation} />
       </div>
-
     </div>
   );
 }
+
+
+
 
 export default MainHeader;
