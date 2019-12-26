@@ -41,7 +41,7 @@ const Text = props => {
         <input
           name={name}          
           id={id}
-          className={renderClass(hasError)}
+          className="formControl"
           aria-label={name}
           {...rest}
         />

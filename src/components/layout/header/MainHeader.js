@@ -9,13 +9,14 @@ import {  mainNavigation , linkTour} from "../../../static/navigation";
 import {FiUser,FiMessageCircle,FiShoppingCart,FiDroplet} from "react-icons/fi";
 import Card from "../../shared/card/Card";
 import HeaderHalp from "../../shared/navigation/HeaderHalp";
+import HeaderLogin from "../../shared/navigation/HeaderLogin";
 export const userNavigationInfo = {
   type:"userNavigation",
   navClass:"userNavigation",
   navLinkInfo: [
-    { title: 'Sing-in', slug: 'sign-in', desingClass:'singIn', icon: <FiUser size={20}/> ,  childComponent:<Card type="header" />}, 
-    { title: 'Help', slug: 'help', desingClass:'help',icon: <FiMessageCircle size={20}/>  , childComponent:<HeaderHalp type="header" /> }, 
-    { title: 'Cart', slug: 'cart', desingClass:'cart',icon: <FiShoppingCart size={20} /> , childComponent:<Card type="header" />}
+    { title: 'Sing-in', slug: '', desingClass:'singIn', icon: <FiUser size={20}/> ,  childComponent:<HeaderLogin type="header" />}, 
+    { title: 'Help', slug: '', desingClass:'help',icon: <FiMessageCircle size={20}/>  , childComponent:<HeaderHalp type="header" /> }, 
+    { title: 'Cart', slug: '', desingClass:'cart',icon: <FiShoppingCart size={20} /> , childComponent:<Card type="header" />}
   ]
 };
 /**

@@ -12,6 +12,9 @@ function Button(props) {
         {
             type === 'simple' ? <a href={slug} className={buttonClass +" button-text"}>{props.children}{title}</a> : ''
         }
+        {
+            type === 'submit' ? <input type="submit" value={title}  className={buttonClass +" button-text"} /> : ''
+        }
           
     </Fragment>
   );

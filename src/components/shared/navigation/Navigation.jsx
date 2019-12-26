@@ -240,8 +240,7 @@ function productMegaMenu(nav, closeToggle) {
                 <li>product one        product & two</li>
                 <li>product one        product & two</li>
                 <li>product one        product & two</li>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
+               
               </ul>
             </div>
             <div className="right-side-mega__single-section">

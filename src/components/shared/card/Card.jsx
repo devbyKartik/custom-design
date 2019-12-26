@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import PropTypes, { func } from 'prop-types';
+import PropTypes from 'prop-types';
 import Button from "../buttons/Button";
 import { headerCartCheckOutButton, headerCartViewCartButton, headerCartAddCatalogue, headerCartPrintableVersion } from "../../../static/navigation"
 /**

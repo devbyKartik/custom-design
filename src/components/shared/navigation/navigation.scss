@@ -61,6 +61,7 @@
                 background: $white;
                 width: 25%;
                 z-index: 999999999999;
+                margin-top: 10px;
             }
 
             @include sm {
@@ -73,7 +74,7 @@
                     position: absolute;
                     right: 0;
                     background: $white;
-                    width: 90%;
+                    width: 100%;
                 }
             }
 
@@ -84,13 +85,14 @@
                 width: 20%;
                 text-align: left;
                 z-index: 99999999999999999;
+                margin-top: 10px;
 
             }
 
             @include sm {
                 .help.modal-toggle-sub-menu {
                     right: 0px;
-                    width: 90%;
+                    width: 100%;
                 }
             }
 
@@ -100,8 +102,9 @@
                 position: absolute;
                 right: 140px;
                 background: $white;
-                width: 20%;
+                width: 25%;
                 z-index: 999999999999;
+                margin-top: 10px;
             }
 
             @include sm {
@@ -109,7 +112,7 @@
                     position: absolute;
                     right: 0px;
                     background: $white;
-                    width: 90%;
+                    width: 100%;
                 }
             }
 
@@ -198,9 +201,9 @@
     padding: 0px 10%;
 
     &__container {
-        background: $input-border;
-        padding: 0px 10px;
-        height: 70vh;
+        // background: $input-border;
+        // padding: 0px 10px;
+        // height: 70vh;
 
     }
 
@@ -216,7 +219,8 @@
                 border-bottom: 1px solid $input-border;
                 background: $hover-bg;
                 font-size: $medium-font;
-                cursor: pointer
+                cursor: pointer;
+                width: 100%;
             }
 
             .active {
@@ -292,6 +296,18 @@
             color: $panel-border;
             color: $dark-gray;
 
+        }
+    }
+}
+
+.header-login-wrapper {
+    background: $hover-bg;
+    &__header {
+        padding: 1px 15px;
+        text-align: left;
+        border-bottom: 1px solid $panel-border;
+        h3{
+            font-size: $large;
         }
     }
 }

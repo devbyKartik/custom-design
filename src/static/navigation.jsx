@@ -132,3 +132,43 @@ export const headerCartPrintableVersion={
   title: 'Click here',
   slug : "/checkout"
 }
+
+export const headerSignInButton={
+  type: 'submit',
+  buttonClass: 'header-signIn',
+  title: 'Sign In',
+  slug : "singin"
+}
+
+
+export const headerLoginPasswordButton={
+  type: 'simple',
+  buttonClass: 'forgot-password',
+  title: 'Password',
+  slug : "/forgot-password"
+}
+
+
+
+export const headerLoginUserIdButton={
+  type: 'simple',
+  buttonClass: 'forgot-password',
+  title: 'User Id ?',
+  slug : "/forgot-user-id"
+}
+
+
+export const headerLoginCustomersClickButton={
+  type: 'simple',
+  buttonClass: 'forgot-password',
+  title: 'Click Here ',
+  slug : "/"
+}
+
+
+export const headerLoginShopAsGuestButton={
+  type: 'submit',
+  buttonClass: 'header-shopAsGuest',
+  title: 'Shop as guest',
+  slug : ""
+}

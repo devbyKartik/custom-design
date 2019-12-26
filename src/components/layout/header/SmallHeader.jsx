@@ -6,6 +6,7 @@ import Search from "../../shared/search/Search";
 import "./header.scss"
 import Button from "../../shared/buttons/Button";
 import { mainMobileNavigation, linkTour } from "../../../static/navigation";
+import HeaderLogin from "../../shared/navigation/HeaderLogin";
 import { FiUser, FiMessageCircle, FiShoppingCart, FiX, FiMenu } from "react-icons/fi";
 
 import Card from "../../shared/card/Card";
@@ -14,7 +15,7 @@ export const userNavigationInfo = {
     type: "userNavigation",
     navClass: "userNavigation",
     navLinkInfo: [
-        { title: '', slug: 'sign-in', desingClass:'singIn', icon: <FiUser size={25} /> ,  childComponent:<Card type="header" /> } ,
+        { title: '', slug: 'sign-in', desingClass:'singIn', icon: <FiUser size={25} /> ,  childComponent:<HeaderLogin type="header" /> } ,
         { title: '', slug: 'help', desingClass:'help', icon: <FiMessageCircle size={25} />  ,  childComponent:<HeaderHalp type="header" />},
         { title: '', slug: 'cart', desingClass:'cart', icon: <FiShoppingCart size={25} /> ,  childComponent:<Card type="header" /> }
     ]

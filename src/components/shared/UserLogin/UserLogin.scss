@@ -1,0 +1,82 @@
+@import '../../../assets/scss/variables.scss';
+
+.mainBlock {
+  padding: 12px 15px;
+  border-bottom: 1px solid $panel-border;
+  text-align: left;
+
+  input {
+    border: 1px solid $input-border;
+
+    margin-bottom: 5px;
+  }
+
+  .block {
+    button {
+      width: 100%;
+    }
+  }
+
+  .forgotContent {
+    padding: 15px 0 0;
+
+    .forgotContentWrapper {
+
+      a,
+      span,
+      button {
+        font-size: 11px;
+        padding: 0 2px;
+      }
+
+      button {
+        color: $link-color;
+      }
+    }
+  }
+
+  .padding {
+    padding: 0px 0;
+
+    label {
+      display: flex;
+      padding: 10px 0px;
+    }
+  }
+
+  .checkbox input {
+    height: 25px;
+    width: 25px;
+    text-align: left;
+    display: flex;
+    border-radius: 0px;
+    background: transparent;
+  }
+
+  .header-signIn.button-text {
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    color: $white;
+    background: $btn-border;
+    margin-top: 10px;
+  }
+  .header-shopAsGuest.button-text{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid $btn-border;
+    border-radius: 25px;
+    color: $btn-border;
+    margin-top: 10px;
+    background: $white;
+  }
+  
+  .form-bottom {
+    text-align: left;
+
+    .forgot-password.button-text {
+      // text-decoration: none;
+      color: $btn-border;
+    }
+  }
+}
