@@ -10,12 +10,15 @@
         margin: 0px;
         padding: 0px;
         li{
-            a {
+            .socialLinks {
                 background: $white;
                 padding: 7px;
                 border-radius: 5px;
                 color: $dark-gray;
                 margin-right: 10px;
+                border: none;
+                cursor: pointer;
+               // background: transparent;
             }
         }
     }

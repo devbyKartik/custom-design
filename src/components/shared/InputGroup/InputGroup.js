@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './InputGroup.scss'
+//import styles from './InputGroup.scss'
 import FormControl from '../FormControl'
 
 /**

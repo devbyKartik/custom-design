@@ -1,0 +1,14 @@
+@import "../../../assets/scss/variables.scss";
+.heading-white {
+    color: $white;
+}
+.heading-d-gray {
+    color: $dark-gray;
+}
+.heading-gray {
+    color: $dark-gray;
+    span {
+        font-size: $medium-font;
+        margin-left: 10px;
+    }
+}

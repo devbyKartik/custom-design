@@ -37,11 +37,14 @@
             &__liveChat {
                 border-left: 1px solid $panel-border;
                 padding: 5px 15px;
-
-                a {
+ 
+                button {
                     font-size: $medium-font;
                     color: $dark-gray;
                     text-decoration: none;
+                    background: transparent;
+                    border: none;
+                
                 }
             }
         }
@@ -62,15 +65,16 @@
                 padding:0px 10px;
             }
 
-            a.link-tour {
+            .link-tour {
                 margin: 10px;
                 border: 1px solid $panel-border;
-                padding: 10px 25px;
+                padding: 8px 25px;
                 border-radius: 5px;
                 font-size: $medium-font;
-                width: 15%;
+                width: 100%;
                 text-decoration: none;
                 color: $dark-gray;
+                background: transparent;
                 svg {
                     width: 15px;
                     position: relative;
@@ -90,7 +94,7 @@
 
     }
     .mobile-header{
-        @include min-md {
+        @include min-sm {
             display:none ;
          }
          // top header scss
@@ -124,11 +128,14 @@
                  border-left: 1px solid $panel-border;
                  padding: 5px 15px;
  
-                 a {
+                 button{
                      font-size: $medium-font;
                      text-decoration: none;
                      text-decoration: none;
                      color: $dark-gray;
+                     background: transparent;
+                     border: none;
+                 
                  }
              }
          }
@@ -150,13 +157,13 @@
                   width: 100px;
                   }
              }
-             a.link-tour {
+             .link-tour {
                  margin: 10px;
                  border: 1px solid $panel-border;
                  padding: 10px 25px;
                  border-radius: 5px;
                  font-size: $medium-font;
-                 width: 15%;
+                 width: 100%;
                  text-decoration: none;
                  color: $dark-gray;
                  svg {
@@ -184,15 +191,16 @@
             width: 100%;
           
 
-            a.link-tour {
+            .link-tour{
                 margin: 10px;
                 border: 1px solid $panel-border;
                 padding: 10px 25px;
                 border-radius: 5px;
                 font-size: $medium-font;
-                width: 15%;
+                width: 100%;
                 text-decoration: none;
                 color: $dark-gray;
+                background: transparent;
                 svg {
                     width: 15px;
                     position: relative;

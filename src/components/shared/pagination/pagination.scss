@@ -1,0 +1,21 @@
+@import "../../../assets/scss/variables.scss";
+.pagination-wrapper {
+    ul.pagination {
+        list-style: none;
+        display: flex;
+         li {
+            padding: 5px 16px;
+            border-right: 1px solid $panel-border;
+            cursor: pointer;
+            color:$dark-gray; 
+        }
+        li:last-child{
+            border-right: none;
+        }
+
+        .active {
+            color: $link-color;
+        }
+    }
+}
+

@@ -59,6 +59,7 @@
                         border: 1px solid $link-color;
                         padding: 10px 25px;
                         color: $link-color;
+                        background: transparent;
                      }
                      .rounded-button-red{
                         text-decoration: none;
@@ -75,6 +76,9 @@
                     color: $light-gray;
                     .click-here {
                         color:  $link-color;
+                        background: transparent;
+                        border: none;
+                        cursor: pointer;
                     }
                 }
 

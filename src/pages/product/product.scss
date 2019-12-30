@@ -1,0 +1,42 @@
+@import "../../assets/scss/variables.scss";
+@import "../../assets/scss/mixins/breakpoints.scss";
+.heading-pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    flex-wrap: wrap;
+    @include xs {
+        h1{
+            font-size: 20px;
+            width:100%;
+            display: flex;
+            flex-wrap: wrap;
+
+            span{
+                width: 100%;
+                margin-left: 0px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+.product-wrapper{
+    margin-top: 10px;
+    &__container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &__sidebar {
+            height: 200px;
+            width: 155;
+            width: 15%;
+            border:1px solid $panel-border;
+        }
+        &__body {
+            height: 500px;
+            width: 83%;
+            border-top:1px solid $panel-border;
+            margin-left: 10px;
+        }
+    }
+}

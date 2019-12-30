@@ -1,94 +1,102 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment, useContext } from 'react';
 import "./navigation.scss";
-import {FiChevronDown  , FiChevronUp} from "react-icons/fi";
+import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import PropTypes from 'prop-types';
-
+import { Laguage } from "../../../services/context/Language";
+import ListGroup from "../list/ListGroup";
+import Heading from "../text/Heading";
+import Button from "../buttons/Button"
 /**
  *Name: Navigation
  *Desc: Navigation component for  all types of menus.
  */
 
 
+
 function Navigation(props) {
   const { navLinkInfo, type, navClass, heading } = props.info;
   const [footerMobileToggle, setFooterMobileToggle] = useState(false);
+  const language = useContext(Laguage);
   return (
     <div className={navClass}>
       {
-        type === "mobile" && <ul className={navClass + "__nav-list"}>
+        type === "mobile" && <ListGroup cssClassName={navClass + "__nav-list"}>
           {
             navLinkInfo && navLinkInfo.length > 0 && navLinkInfo.map((nav, index) =>
               <li key={index}>{ToggleSubNavigation(nav)}</li>
             )
           }
-        </ul>
+        </ListGroup>
       }
       {
-        type === "simple" && <ul className={navClass + "__nav-list"}>
+        type === "simple" && <ListGroup cssClassName={navClass + "__nav-list"}>
           {
             navLinkInfo && navLinkInfo.length > 0 && navLinkInfo.map((nav, index) =>
               <li key={index}><a href={nav.slug}>{nav.title}</a></li>
             )
           }
 
-        </ul>
+        </ListGroup>
       }
 
       {
-        type === "product" && <ul className={navClass + "__nav-list"}>
+        type === "product" && <ListGroup cssClassName={navClass + "__nav-list"}>
           {
             navLinkInfo && navLinkInfo.length > 0 && navLinkInfo.map((nav, index) =>
               <li key={index}>{ToggleMainProductMenu(nav)}</li>
             )
           }
 
-        </ul>
+        </ListGroup>
       }
 
 
       {
-        type === "userNavigation" && <ul className={navClass + "__nav-list"}>
+        type === "userNavigation" && <ListGroup cssClassName={navClass + "__nav-list"}>
           {
             navLinkInfo && navLinkInfo.length > 0 && navLinkInfo.map((nav, index) =>
-              <li key={index} >{ToggleSlideMenu(nav , navLinkInfo.length,index)}</li>
+              <li key={index} >{ToggleSlideMenu(nav, navLinkInfo.length, index)}</li>
             )
           }
 
-        </ul>
+        </ListGroup>
       }
 
       {
         type === "footerLinks" &&
         <Fragment>
           <div className={"desktop-view"}>
-            <h3>{heading}</h3>
-            <ul className={navClass + "__nav-list"}>
+            <Heading type="h3" color="white" text={heading[language]} />
+            <ListGroup cssClassName={navClass + "__nav-list"}>
               {
                 navLinkInfo && navLinkInfo.length > 0 && navLinkInfo.map((nav, index) =>
-                  <li key={index}><a href={nav.slug}>{nav.title}</a></li>
+                  <li key={index}><a href={nav.slug}>{nav.title[language]}</a></li>
                 )
               }
 
-            </ul>
+            </ListGroup>
           </div>
           <div className={"mobile-view"}>
-            <h3 onClick={() => { setFooterMobileToggle(!footerMobileToggle) }}>{heading}</h3>
-            {
-              footerMobileToggle && <ul className={navClass + "__nav-list"}>
-                {
-                  navLinkInfo && navLinkInfo.length > 0 && navLinkInfo.map((nav, index) =>
-                    <li key={index}>{nav.title}</li>
-                  )
-                }
+            <Button buttonInfo={{type : 'button', buttonClass: 'heading-btn', title: {fn: '',en:''},slug : ""}} onChangefun={() => { setFooterMobileToggle(!footerMobileToggle) }}>
+              <Heading type="h3" color="white" text={heading[language]} />
+            </Button>
 
-              </ul>
-            }
+          {
+            footerMobileToggle && <ListGroup cssClassName={navClass + "__nav-list"}>
+              {
+                navLinkInfo && navLinkInfo.length > 0 && navLinkInfo.map((nav, index) =>
+                  <li key={index}>{nav.title[language]}</li>
+                )
+              }
+
+            </ListGroup>
+          }
 
           </div>
 
         </Fragment>
 
-      }
+    }
 
 
 
@@ -103,20 +111,21 @@ function Navigation(props) {
  */
 
 function ToggleSubNavigation(nav) {
+  const language = useContext(Laguage);
   const { title, child, parent } = nav
   const [childToggle, setChildToggle] = useState(false)
   return (
     <div className="single-toggle-child">
-    
-      <p >{title} {parent && <span className="mobile-child-navigation" onClick={() => { setChildToggle(!childToggle) }}> {childToggle ?  <FiChevronUp/>:<FiChevronDown/>}</span>}</p>
+
+      <p >{title[language]} {parent && <span className="mobile-child-navigation" onClick={() => { setChildToggle(!childToggle) }}> {childToggle ? <FiChevronUp /> : <FiChevronDown />}</span>}</p>
       {
-        childToggle && <ul className="mobile-child-list">
+        childToggle && <ListGroup cssClassName="mobile-child-list">
           {child && child.length > 1 && child.map((itm, index) =>
-            <li key={index}>{itm.title}</li>
+            <li key={index}>{itm.title[language]}</li>
           )
 
           }
-        </ul>
+        </ListGroup>
       }
 
     </div>
@@ -131,20 +140,21 @@ function ToggleSubNavigation(nav) {
 
 
 
-function ToggleSlideMenu(nav, length,index) {
-  const { title ,icon,childComponent,desingClass} = nav
+function ToggleSlideMenu(nav, length, index) {
+  const language = useContext(Laguage);
+  const { title, icon, childComponent, desingClass } = nav
   const [childToggle, setChildToggle] = useState(false);
-  const activeCalss=childToggle? 'grayActive':''
+  const activeCalss = childToggle ? 'grayActive' : ''
   return (
     <div className={"single-toggle-child " + activeCalss}>
-    
-  <p onClick={() => { setChildToggle(!childToggle) }}> {icon}{title}</p>
-  {
-    length===index+1? <div className="cart-bottom-line"></div> :''
-  }
+
+      <p onClick={() => { setChildToggle(!childToggle) }}> {icon}{title[language]}</p>
+      {
+        length === index + 1 ? <div className="cart-bottom-line"></div> : ''
+      }
       {
         childToggle &&
-        <div className={desingClass + " modal-toggle-sub-menu "}>
+        <div  className={desingClass + " modal-toggle-sub-menu "} >
           {childComponent}
         </div>
 
@@ -162,12 +172,13 @@ function ToggleSlideMenu(nav, length,index) {
 
 
 function ToggleMainProductMenu(nav) {
+  const language = useContext(Laguage);
   const { title } = nav
   const [childToggle, setChildToggle] = useState(false);
   const closeToggle = () => setChildToggle(false);
   return (
     <div className="single-toggle-child">
-      <p className={childToggle ? 'active' : ''} onClick={() => { setChildToggle(!childToggle) }} >{title} {childToggle ? <FiChevronUp size="18" />:<FiChevronDown size="18" />} </p>
+      <p className={childToggle ? 'active' : ''} onClick={() => { setChildToggle(!childToggle) }} >{title[language]} {childToggle ? <FiChevronUp size="18" /> : <FiChevronDown size="18" />} </p>
 
       {
         childToggle &&
@@ -197,7 +208,7 @@ function productMegaMenu(nav, closeToggle) {
   return (
     <div className="productMegaMenu-wrapper">
       <div className="productMegaMenu-wrapper__left-sidebar">
-        <ul>
+        <ListGroup cssClassName="">
           <li >Category one</li>
           <li className="active">Category one</li>
           <li>Category one</li>
@@ -217,63 +228,32 @@ function productMegaMenu(nav, closeToggle) {
           <li>Category one</li>
           <li>Category one</li>
           <li>Category one</li>
-        </ul>
+        </ListGroup>
       </div>
       <div className="productMegaMenu-wrapper__container-link">
         <div className="right-side-mega">
-          <a className="close-button" onClick={() => closeToggle()}>Close</a>
+          {/* <a className="close-button" onClick={() => closeToggle()}></a> */}
+          <Button buttonInfo={{type : 'button', buttonClass: 'close-button transparent', title: {fn: 'Close',en:'Close'},slug : ""}} onChangefun={() => closeToggle()}/>
           <div className="right-side-mega__sections">
 
             <div className="right-side-mega__single-section">
               <p className="category-heading">Heading one</p>
-              <ul>
+              <ListGroup>
                 <li>product one        product & two</li>
                 <li>product one        product & two</li>
                 <li>product one        product & two</li>
                 <li>product one        product & two</li>
                 <li>product one        product & two</li>
-              </ul>
+              </ListGroup>
             </div>
             <div className="right-side-mega__single-section">
               <p className="category-heading">Heading one</p>
-              <ul>
+              <ListGroup>
                 <li>product one        product & two</li>
                 <li>product one        product & two</li>
                 <li>product one        product & two</li>
-               
-              </ul>
-            </div>
-            <div className="right-side-mega__single-section">
-              <p className="category-heading">Heading one</p>
-              <ul>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
-              </ul>
-            </div>
-          </div>
-          <div className="right-side-mega__sections">
-            <div className="right-side-mega__single-section">
-              <p className="category-heading">Heading one</p>
-              <ul>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
-              </ul>
-            </div>
-            <div className="right-side-mega__single-section">
-              <p className="category-heading">Heading one</p>
-              <ul>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
-                <li>product one        product & two</li>
-              </ul>
+
+              </ListGroup>
             </div>
             <div className="right-side-mega__single-section">
               <p className="category-heading">Heading one</p>
@@ -316,6 +296,38 @@ function productMegaMenu(nav, closeToggle) {
                 <li>product one        product & two</li>
                 <li>product one        product & two</li>
               </ul>
+            </div>
+          </div>
+          <div className="right-side-mega__sections">
+            <div className="right-side-mega__single-section">
+              <p className="category-heading">Heading one</p>
+              <ListGroup>
+                <li>product one        product & two</li>
+                <li>product one        product & two</li>
+                <li>product one        product & two</li>
+                <li>product one        product & two</li>
+                <li>product one        product & two</li>
+              </ListGroup>
+            </div>
+            <div className="right-side-mega__single-section">
+              <p className="category-heading">Heading one</p>
+              <ListGroup>
+                <li>product one        product & two</li>
+                <li>product one        product & two</li>
+                <li>product one        product & two</li>
+                <li>product one        product & two</li>
+                <li>product one        product & two</li>
+              </ListGroup>
+            </div>
+            <div className="right-side-mega__single-section">
+              <p className="category-heading">Heading one</p>
+              <ListGroup>
+                <li>product one        product & two</li>
+                <li>product one        product & two</li>
+                <li>product one        product & two</li>
+                <li>product one        product & two</li>
+                <li>product one        product & two</li>
+              </ListGroup>
             </div>
           </div>
         </div>

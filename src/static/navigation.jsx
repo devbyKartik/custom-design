@@ -11,15 +11,15 @@ export const userNavigationInfo = {
     type:"product",
     navClass:"product-navigation",
     navLinkInfo: [
-      { title: 'Product One', child: [] , parent:true}, 
-      { title: 'Product Two', child: [] , parent:true}, 
-      { title: 'Product Three', child: [] , parent:true}, 
+      { title: {en:'Product One',fn:'Product Onefn'}, child: [] , parent:true}, 
+      { title: {en:'Product two',fn:'Product twofn'}, child: [] , parent:true}, 
+      { title: {en:'Product three',fn:'Product threefn'}, child: [] , parent:true}, 
     ] 
   }
   export  const linkTour={
-    type:'simple',
+    type:'button',
     buttonClass:'link-tour',
-    title : 'Link & Toner',
+    title : {fn:'Link & Toner',en:'Link & Toner'},
     slug :"/link-tour"
    }
 
@@ -27,16 +27,16 @@ export const userNavigationInfo = {
     type: "mobile",
     navClass: "mobile-navigation",
     navLinkInfo: [
-        { title: 'Products', slug: 'product' , icon: 'user' , parent:true , child:[{title:"productOne" , slug:"#"},{title:"productTwo" , slug:"#"}]},
-        { title: 'Help', slug: 'help', icon: 'help' , parent:true , child:[{title:"productOne" , slug:"#"},{title:"productTwo" , slug:"#"}]},
-        { title: 'Cart', slug: 'cart', icon: 'cart' , parent:true , child:[{title:"productOne" , slug:"#"},{title:"productTwo" , slug:"#"}]}
+        { title: {en:'Products',fn:'Products'}, slug: 'product' , icon: 'user' , parent:true , child:[{title:{en:'productOne',fn:'productOne'} , slug:"#"},{title:{en:'productTwo',fn:'productTwo'} , slug:"#"}]},
+        { title: {en:'Help',fn:'Help'}, slug: 'help', icon: 'help' , parent:true , child:[{title:{en:'productOne',fn:'productOne'} , slug:"#"},{title:{en:'productTwo',fn:'productTwo'} , slug:"#"}]},
+        { title: {en:'Cart',fn:'Cart'}, slug: 'cart', icon: 'cart' , parent:true , child:[{title:{en:'productOne',fn:'productOne'} , slug:"#"},{title:{en:'productTwo',fn:'productTwo'} , slug:"#"}]}
     ]
 };
 
 export const liveChat = {
-  type: 'simple',
+  type: 'button',
   buttonClass: 'live-chat',
-  title: 'Live Chat',
+  title: {fn:'Live Chat',en:'Live Chat'},
   slug : "/chat"
 }
 export const langSelectOption = {
@@ -46,24 +46,23 @@ export const langSelectOption = {
 export const footerMenuCustomerServics={
   type:"footerLinks",
   navClass: "footer-navigation",
-  heading:"Customer Services",
+  heading:{en:"Customer Services",fn:"Customer Services"},
   navLinkInfo: [
-      { title: 'Help center', slug: 'help-center' },
-      { title: 'Contact-us', slug: 'contact-us' },
-      { title: 'Return an item', slug: 'return item' },
-      { title: 'Return an item', slug: 'return item' },
-      { title: 'Return an item', slug: 'return item' }
+      { title: {en:'Help center',fn:'Help center'}, slug: 'help-center' },
+      { title: {en:'Contact-us',fn:'Contact-us'}, slug: 'contact-us' },
+      { title: {en:'Return an item',fn:'Return an item'}, slug: 'return item' },
+     
   ]
 }
 export const footerMenuCorporateInfo={
   type:"footerLinks",
   navClass: "footer-navigation",
-  heading:"Corporate Info",
+  heading:{en:"Corporate Info",fn:"Corporate Info"},
   navLinkInfo: [
-      { title: 'Staples Business Advantage Overview', slug: 'help-center' },
-      { title: 'Industries Served', slug: 'contact-us' },
-      { title: 'Blog', slug: 'return item' },
-      { title: 'Our Brands', slug: 'return item' }
+      { title: {en:'Staples Business Advantage Overview',fn:'Staples Business Advantage Overview'}, slug: 'help-center' },
+      { title: {en:'Industries Served',fn:'Industries Served'}, slug: 'contact-us' },
+      { title: {en:'Blog',fn:'Blog'}, slug: 'return item' },
+      { title: {en:'Our Brands',fn:'Our Brands'}, slug: 'return item' }
       
   ]
 }
@@ -71,13 +70,13 @@ export const footerMenuCorporateInfo={
 export const staplesCorporateSolutions={
   type:"footerLinks",
   navClass: "footer-navigation",
-  heading:"Staples Corporate Solutions",
+  heading:{en:"Staples Corporate Solutions",fn:"Staples Corporate Solutions"},
   navLinkInfo: [
-      { title: 'Office Products', slug: 'help-center' },
-      { title: 'Technology Products', slug: 'contact-us' },
-      { title: 'Furniture', slug: 'return item' },
-      { title: 'Facilities', slug: 'return item' },
-      { title: 'Promotional Products', slug: 'return item' },
+      { title: {en:'Office Products',fn:'Office Products'}, slug: 'help-center' },
+      { title: {en:'Technology Products',fn:'Technology Products'}, slug: 'contact-us' },
+      { title: {en:'Furniture',fn:'Furniture'}, slug: 'return item' },
+      { title: {en:'Facilities',fn:'Facilities'}, slug: 'return item' },
+      { title: {en:'Promotional Products',fn:'Promotional Products'}, slug: 'return item' },
       
   ]
 }
@@ -86,11 +85,11 @@ export const staplesCorporateSolutions={
 export const staplesNewCustomer={
   type:"footerLinks",
   navClass: "footer-navigation",
-  heading:"New Customer",
+  heading:{en:"New Customer",fn:"New Customer"},
   navLinkInfo: [
-      { title: 'Become a Customer', slug: 'help-center' },
-      { title: 'Govt. Customers', slug: 'contact-us' },
-      { title: 'Memberships', slug: 'return item' },
+      { title: {en:'Become a Customer',fn:'Become a Customer123'}, slug: 'help-center' },
+      { title: {en:'Govt. Customers',fn:'Govt. Customers'}, slug: 'contact-us' },
+      { title: {en:'Memberships',fn:'Memberships'}, slug: 'return item' },
   ]
 }
 
@@ -107,61 +106,61 @@ export const bottomFooterText={
 }
 
 export const headerCartCheckOutButton={
-  type: 'simple',
+  type: 'button',
   buttonClass: 'rounded-button-red',
-  title: 'Checkout',
+  title: {fn:'Checkout',en:'Checkout'},
   slug : "/checkout"
 }
 
 export const headerCartViewCartButton={
-  type: 'simple',
+  type: 'button',
   buttonClass: 'rounded-button ',
-  title: 'View Cart',
+  title: {fn:'View Cart',en:'View Cart'},
   slug : "/cart"
 }
 
 export const headerCartAddCatalogue={
-  type: 'simple',
+  type: 'button',
   buttonClass: 'click-here',
-  title: 'Click here',
+  title: {fn:'Click here',en:'Click here'},
   slug : "/checkout"
 }
 export const headerCartPrintableVersion={
-  type: 'simple',
+  type: 'button',
   buttonClass: 'click-here',
-  title: 'Click here',
+  title: {fn:'Click here',en:'Click here'},
   slug : "/checkout"
 }
 
 export const headerSignInButton={
   type: 'submit',
   buttonClass: 'header-signIn',
-  title: 'Sign In',
+  title: {fn:'Sign In',en:'Sign In'},
   slug : "singin"
 }
 
 
 export const headerLoginPasswordButton={
-  type: 'simple',
+  type: 'button',
   buttonClass: 'forgot-password',
-  title: 'Password',
+  title: {fn:'Password',en:'Password'},
   slug : "/forgot-password"
 }
 
 
 
 export const headerLoginUserIdButton={
-  type: 'simple',
+  type: 'button',
   buttonClass: 'forgot-password',
-  title: 'User Id ?',
+  title: {fn:'User Id ?',en:'User Id ?'},
   slug : "/forgot-user-id"
 }
 
 
 export const headerLoginCustomersClickButton={
-  type: 'simple',
+  type: 'button',
   buttonClass: 'forgot-password',
-  title: 'Click Here ',
+  title: {fn:'Click Here',en:'Click Here'},
   slug : "/"
 }
 
@@ -169,6 +168,53 @@ export const headerLoginCustomersClickButton={
 export const headerLoginShopAsGuestButton={
   type: 'submit',
   buttonClass: 'header-shopAsGuest',
-  title: 'Shop as guest',
+  title: {fn:'Shop as guest',en:'Shop as guest'},
+  
   slug : ""
 }
+
+export const categoryList=[
+  {
+    icon:"FaBars",
+    title:{en: 'Paper', fn:'Paper'},
+    ulr:"/paper"
+  },
+  {
+    icon:"FaFolderOpen",
+    title: {en: 'Filling & Organization', fn:'Filling & Organization'},
+    ulr:"/filling-organization"
+  },
+  {
+    icon:"FaLaptop",
+    title: {en: 'Technology', fn:'Technology'},
+    ulr:"/technology"
+  },
+  {
+    icon:"FaPrint",
+    title: {en: 'Ink & Toner', fn:'Ink & Toner'},
+    ulr:"/ink-tonner"
+  },
+  {
+    icon:"FaEyeDropper",
+    title: {en: 'Janitorial Supplies', fn:'Janitorial Supplies'},
+    ulr:"/janitorial Supplies"
+  },
+  {
+    icon:"FaChair",
+    title: {en: 'Furniture', fn:'Furniture'},
+    ulr:"/furniture"
+  },
+  {
+    icon:"FaMugHot",
+    title: {en: 'Breakroom', fn:'Breakroom'},
+    ulr:"/breakroom"
+  },
+  {
+    icon:"FaPenAlt",
+    title: {en: 'Pen', fn:'Pen'},
+    ulr:"/pen"
+  },
+ 
+];
+
+

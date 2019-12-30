@@ -3,7 +3,7 @@ import Button from "../buttons/Button";
 import InputGroup from '../FormControl/'
 import  './UserLogin.scss';
 import {headerSignInButton,headerLoginPasswordButton,headerLoginUserIdButton,headerLoginCustomersClickButton} from "../../../static/navigation";
-
+import Text from "../text/Text";
 
 
 const UserLogin = ({ setCurrentState }) => {
@@ -25,8 +25,7 @@ const UserLogin = ({ setCurrentState }) => {
             id="userId"
             onChange={event => {
             }}
-            errors={false}
-            dirties={false}
+          
           />
         </div>
         <div className="padding">
@@ -36,20 +35,19 @@ const UserLogin = ({ setCurrentState }) => {
             type="password"
             id="password"
             onChange={event => { }}
-            errors={false}
-            dirties={false}
+           
           />
         </div>
        
 
         <div className="block">
-          <Button buttonInfo={headerSignInButton} />
+          <Button buttonInfo={headerSignInButton} type="submit" onChangefun={()=>{console.log("hello")}} />
         </div>
       </form>
 
       <div className="form-bottom">
-        <p>Forgot <Button buttonInfo={headerLoginPasswordButton} /> or <Button buttonInfo={headerLoginUserIdButton}/></p>
-        <p>Federal Government Customers? <Button buttonInfo={headerLoginCustomersClickButton} /> </p>
+        <Text type="link">Forgot <Button buttonInfo={headerLoginPasswordButton}  onChangefun={()=>{console.log("hello")}} /> or <Button onChangefun={()=>{console.log("hello")}} buttonInfo={headerLoginUserIdButton}/></Text>
+        <Text type="link">Federal Government Customers? <Button buttonInfo={headerLoginCustomersClickButton} /> </Text>
       </div>
     </div>
   )

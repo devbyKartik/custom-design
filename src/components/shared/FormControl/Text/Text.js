@@ -6,11 +6,11 @@ const renderIcon = icon => {
   return <span className={styles[icon]} />
 }
 
-const renderClass = error => {
-  return error
-    ? `${styles.formControl} ${styles.error}`
-    : `${styles.formControl}`
-}
+// const renderClass = error => {
+//   return error
+//     ? `${styles.formControl} ${styles.error}`
+//     : `${styles.formControl}`
+// }
 
 /**
  * Name: Text
@@ -20,19 +20,20 @@ const renderClass = error => {
 const Text = props => {
   const { label, icon, errormsg, error, id, name, ...rest } = props
 
-  let errorMessage = errormsg
-  let hasError = error
+  //let errorMessage = errormsg
+  //let hasError = error
 
-  if (
-    !errormsg &&
-    props.errors &&
-    props.errors[name] &&
-    props.dirties &&
-    props.dirties[name]
-  ) {
-    errorMessage = props.errors[name]
-    hasError = !!errorMessage
-  }
+  // if (
+  //   !errormsg &&
+  //   props.errors &&
+  //   props.errors[name] 
+  //   //&&
+  //   //props.dirties &&
+  //   //props.dirties[name]
+  // ) {
+  //   errorMessage = props.errors[name]
+  //  // hasError = !!errorMessage
+  // }
 
   return (
     <React.Fragment>
@@ -46,7 +47,7 @@ const Text = props => {
           {...rest}
         />
         {icon && renderIcon(icon)}
-        {errorMessage && <p>{errorMessage}</p>}
+        {/* {errorMessage && <p>{errorMessage}</p>} */}
       </div>
     </React.Fragment>
   )

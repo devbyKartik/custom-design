@@ -1,0 +1,22 @@
+@import "../../../assets/scss/variables.scss";
+button.heading-btn.button-text {
+    background: transparent;
+    border: none;
+    padding: 0px;
+    margin: 0;
+    cursor: pointer;
+}
+
+button.transparent.button-text {
+    background: transparent;
+    border: none;
+}
+button.red{
+    color:$link-decoration;
+}
+
+button.banner-slider-image.button-text {
+    border: none;
+   background: transparent;
+   cursor: pointer;
+}

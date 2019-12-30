@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Button from "../buttons/Button";
+import Text from "../text/Text";
+import Heading from "../text/Heading";
 import { headerCartCheckOutButton, headerCartViewCartButton, headerCartAddCatalogue, headerCartPrintableVersion } from "../../../static/navigation"
 /**
  *Name: Card
@@ -22,7 +24,7 @@ function headerCard() {
     return (
         <div className="header-card-wrapper">
             <div className="header-card-wrapper__header">
-                <p>8 Items</p>
+                <Heading type="h3"  color="white" text={"8 Items"} />
             </div>
             <div className="header-card-wrapper__body">
                 <table className="card-table">
@@ -47,7 +49,7 @@ function headerCard() {
                 </table>
                 <div className="card-price">
                     <div className="left-section">
-                        <a className="more-items">+5 More Items</a>
+                         <Button buttonInfo={{type : 'button', buttonClass: 'transparent red', title: {fn: '+5 More Items',en:'+5 More Items'},slug : ""}} onChangefun={() => {}}></Button>
                     </div>
                     <div className="right-section">
                         <p>Order Total:</p>
@@ -55,12 +57,12 @@ function headerCard() {
                     </div>
                 </div>
                 <div className="card-button">
-                    <Button buttonInfo={headerCartCheckOutButton} />
-                    <Button buttonInfo={headerCartViewCartButton} />
+                    <Button buttonInfo={headerCartCheckOutButton} onChangefun={()=>{}} />
+                    <Button buttonInfo={headerCartViewCartButton} onChangefun={()=>{}} />
                 </div>
                 <div className="card-footer-link">
-                    <p><Button buttonInfo={headerCartAddCatalogue} /> to add Catalogue</p>
-                    <p><Button buttonInfo={headerCartPrintableVersion} /> for printable version</p>
+                    <Text type="link"><Button buttonInfo={headerCartAddCatalogue} onChangefun={()=>{}} /> to add Catalogue</Text>
+                    <Text type="link"><Button buttonInfo={headerCartPrintableVersion} onChangefun={()=>{}} /> for printable version</Text>
                 </div>
 
             </div>
@@ -72,8 +74,4 @@ function headerCard() {
 Card.propTypes = {
     type: PropTypes.string,
 }
-
-
-
-
 export default Card;

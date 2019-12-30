@@ -4,47 +4,33 @@ import Button from "../buttons/Button";
 import InputGroup from '../FormControl/'
 import  './UserLogin.scss';
 import {headerLoginShopAsGuestButton} from "../../../static/navigation";
-
+import Text from "../text/Text";
 
 
 const GuestLogin = ({ setCurrentState }) => {
-//   const [formState, setFormState] = useState({
-//     errors: {},
-//     dirties: {},
-//     signInErrorMessage: ''
-//   })
-//  useEffect(() => {
-//     isMounted = true
-//     return () => {
-//       isMounted = false
-//     }
-//   }, [])
 
 
 
   return (
     <div className="mainBlock">
-      <p>Don't have a login and want to shop as a guest? Enter your postal code below and start shopping as a  guest , right away!</p>
-      <form
-       
-      >
+      <Text type="black">Don't have a login and want to shop as a guest? Enter your postal code below and start shopping as a  guest , right away!</Text>
+      <form>
         <div className="padding">
           <InputGroup
             label={"Postal Code"}
             type="text"
-            name="userid"
-            id="userId"
+            name="postCode"
+            id="postCode"
             onChange={event => {
             }}
-            errors={false}
-            dirties={false}
+            
           />
         </div>
        
        
 
         <div className="block">
-          <Button buttonInfo={headerLoginShopAsGuestButton} />
+          <Button buttonInfo={headerLoginShopAsGuestButton} onChangefun={()=>{}} />
         </div>
       </form>
 

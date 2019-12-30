@@ -7,20 +7,25 @@
     @include sm {
         width: 50%;
      }
-    input{
-        height: 30px;
-        width: 80%;
-        padding-left: 10px;
-        border: 1px solid $body-color;
-        border-radius: 5px 0px 0px 5px;
-    }
+     div{
+         width: 100%;
+        input{
+            height: 15px;
+            width: 100%;
+            padding-left: 10px;
+            border: 1px solid $body-color;
+            border-radius: 5px 0px 0px 5px;
+         
+        }
+     }
+    
     .search-btn {
         background: $body-color;
-        height: 14px;
         width: 50px;
         text-align: center;
-        padding: 10px;
+        padding: 5px;
         border-radius: 0px 5px 5px 0px;
+        border: none;
     }
     
 }

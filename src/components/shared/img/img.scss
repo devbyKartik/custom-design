@@ -1,0 +1,19 @@
+img.img.rounded {
+    border-radius: 15px;
+}
+
+img.img.Circle {
+    border-radius: 100%;
+}
+
+img.img.thumbnail {
+    // box-shadow: 0px 0px 7px 5px #ccc;
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+}
+
+.banner-wrapper__single-slide-img {
+    width: 100%;
+}

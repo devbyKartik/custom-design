@@ -15,9 +15,9 @@ export const userNavigationInfo = {
     type: "userNavigation",
     navClass: "userNavigation",
     navLinkInfo: [
-        { title: '', slug: 'sign-in', desingClass:'singIn', icon: <FiUser size={25} /> ,  childComponent:<HeaderLogin type="header" /> } ,
-        { title: '', slug: 'help', desingClass:'help', icon: <FiMessageCircle size={25} />  ,  childComponent:<HeaderHalp type="header" />},
-        { title: '', slug: 'cart', desingClass:'cart', icon: <FiShoppingCart size={25} /> ,  childComponent:<Card type="header" /> }
+        { title: {en:'',fn:''}, slug: 'sign-in', desingClass:'singIn', icon: <FiUser size={25} /> ,  childComponent:<HeaderLogin type="header" /> } ,
+        { title: {en:'',fn:''}, slug: 'help', desingClass:'help', icon: <FiMessageCircle size={25} />  ,  childComponent:<HeaderHalp type="header" />},
+        { title: {en:'',fn:''}, slug: 'cart', desingClass:'cart', icon: <FiShoppingCart size={25} /> ,  childComponent:<Card type="header" /> }
     ]
 };
 /**
@@ -33,7 +33,7 @@ function SmallHeader() {
                 <TopHeader />
                 <div className="headerMiddle">
                     <div className="mobile-navigation">
-                        <a onClick={() => { setToggle(!navToggle) }}>{navToggle ? <FiX /> : <FiMenu />}</a>
+                        <Button buttonInfo={{type : 'button', buttonClass: 'heading-btn', title: {fn: '',en:''},slug : ""}} onChangefun={() => { setToggle(!navToggle) }}>{navToggle ? <FiX /> : <FiMenu />}</Button>
                     </div>
                     <Logo />
                     <Navigation info={userNavigationInfo} />
@@ -41,7 +41,7 @@ function SmallHeader() {
                 <div className="header-sm-search">
                     <Search />
                     <div className="link-toner-wrapper">
-                        <Button buttonInfo={linkTour}></Button>
+                        <Button buttonInfo={linkTour} onChangefun={()=>{}}></Button>
                     </div>
                 </div>
             </div>

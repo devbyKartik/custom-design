@@ -1,0 +1,23 @@
+@import "../../assets//scss/mixins/breakpoints.scss";
+.home-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 1000px;
+    &__banner-slider {
+        width: 100%;
+    }
+}
+
+.home-deals-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    &__single{
+        width: 50%;
+        @include sm {
+            width: 100%;
+          }
+        
+    }
+}

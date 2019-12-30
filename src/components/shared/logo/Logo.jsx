@@ -1,5 +1,5 @@
 import React ,{Fragment} from 'react';
-
+import { Link} from "react-router-dom";
 import  { ReactComponent as LogoImage } from "../../../assets/images/staples_logo.svg"
 /**
  *Name: Logo
@@ -10,7 +10,7 @@ function Logo() {
   return (
     <Fragment>
        <div className="logo">
-       <LogoImage />
+        <Link to="/"><LogoImage /></Link> 
        </div>
     </Fragment>
   );

@@ -1,0 +1,29 @@
+@import "../../../assets/scss/variables.scss";
+@import "../../../assets/scss/mixins/breakpoints.scss";
+.Breadcrumb-wrapper {
+    padding: 0px 20px 10px 10px;
+    border-bottom: 1px solid $panel-border;
+    @include xs {
+        padding: 0px 10px 10px 10px;
+      }
+    ul.breadcrumb {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        li {
+            padding: 5px 5px;
+            color: $dark-gray; 
+            font-size: $medium-font;
+            @include xs {
+                font-size: $small-font;
+              }
+            .listButtonLink{
+                color: $dark-gray; 
+                
+            }
+        }
+    }
+}
+
+
